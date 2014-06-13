@@ -40,35 +40,23 @@ angular.module( 'ngBoilerplate.home', [
  */
 .controller( 'HomeCtrl', function HomeController( $scope ) {
   $scope.tiles = [{
-    id: 1,
+    id: 'b1',
+    title: 'Bid #1',
+    expires: new Date(+new Date + 1728e5).getTime(),
     isVisible: true,
-    title: 'Title 1',
-    image : null,
-    timer: 666
+    image: 'assets/images/bid1.jpg'
   }, {
-    id: 2,
+    id: 'b2',
+    title: 'Bid #2',
+    expires: new Date(+new Date + 864e5).getTime(),
     isVisible: true,
-    title: 'Title 2',
-    image : null,
-    timer: 666
+    image: 'assets/images/bid2.jpg'
   }, {
-    id: 3,
+    id: 'b3',
+    title: 'Bid #3',
+    expires: new Date(+new Date + 1728e5).getTime(),
     isVisible: true,
-    title: 'Title 3',
-    image : null,
-    timer: 666
-  }, {
-    id: 4,
-    isVisible: true,
-    title: 'Title 4',
-    image : null,
-    timer: 666
-  }, {
-    id: 5,
-    isVisible: true,
-    title: 'Title 5',
-    image : null,
-    timer: 666
+    image: 'assets/images/bid3.jpg'
   }];
 })
 
