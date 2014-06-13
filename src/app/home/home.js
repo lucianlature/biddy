@@ -31,7 +31,7 @@ angular.module( 'ngBoilerplate.home', [
         templateUrl: 'home/home.tpl.html'
       }
     },
-    data:{ pageTitle: 'Home' }
+    data:{ pageTitle: 'Bids' }
   });
 })
 
@@ -39,6 +39,37 @@ angular.module( 'ngBoilerplate.home', [
  * And of course we define a controller for our route.
  */
 .controller( 'HomeCtrl', function HomeController( $scope ) {
+  $scope.tiles = [{
+    id: 1,
+    isVisible: true,
+    title: 'Title 1',
+    image : null,
+    timer: 666
+  }, {
+    id: 2,
+    isVisible: true,
+    title: 'Title 2',
+    image : null,
+    timer: 666
+  }, {
+    id: 3,
+    isVisible: true,
+    title: 'Title 3',
+    image : null,
+    timer: 666
+  }, {
+    id: 4,
+    isVisible: true,
+    title: 'Title 4',
+    image : null,
+    timer: 666
+  }, {
+    id: 5,
+    isVisible: true,
+    title: 'Title 5',
+    image : null,
+    timer: 666
+  }];
 })
 
 ;
