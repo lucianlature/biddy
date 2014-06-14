@@ -42,19 +42,19 @@ angular.module( 'ngBoilerplate.home', [
   $scope.tiles = [{
     id: 'b1',
     title: 'Bid #1',
-    expires: new Date(+new Date + 1728e5).getTime(),
+    expires: new Date(+new Date() + 1728e5).getTime(),
     isVisible: true,
     image: 'assets/images/bid1.jpg'
   }, {
     id: 'b2',
     title: 'Bid #2',
-    expires: new Date(+new Date + 864e5).getTime(),
+    expires: new Date(+new Date() + 864e5).getTime(),
     isVisible: true,
     image: 'assets/images/bid2.jpg'
   }, {
     id: 'b3',
     title: 'Bid #3',
-    expires: new Date(+new Date + 1728e5).getTime(),
+    expires: new Date(+new Date() + 1728e5).getTime(),
     isVisible: true,
     image: 'assets/images/bid3.jpg'
   }];
