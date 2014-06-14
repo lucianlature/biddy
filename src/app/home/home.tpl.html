@@ -7,11 +7,11 @@
       <section id="main">
         <div class="row">
           <div class="col-lg-3" data-template="bids" ng-repeat="tile in tiles">
-            <div class="panel panel-primary view" data-id="{{tile.id}}" data-show="{{tile.isVisible}}">
+            <div class="panel panel-primary view" ng-show="{{tile.isVisible}}">
               <div class="panel-heading">{{tile.title}}</div>
               <p class="panel-body">
                 <img src={{tile.image}} /><br />
-                <span class="timer" data-timer="{{tile.timer}}">{{timerFormat(tile.timer)}}</span>
+                <span class="timer" bid-time-left="format"></span>
               </p>
               <div class="panel-footer">
                 <!---<button type="button" class="btn btn-lg btn-info bid-btn" data-click="bid(tile)" data-toggle="popover" title="first tooltip">Bid now!</button>-->
