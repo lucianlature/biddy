@@ -3,15 +3,15 @@
 Install Node.js and then:
 
 ```sh
-$ git clone git://github.com/joshdmiller/ng-boilerplate
-$ cd ng-boilerplate
+$ git clone git://github.com/lucianlature/biddy
+$ cd biddy
 $ sudo npm -g install grunt-cli karma bower
 $ npm install
 $ bower install
 $ grunt watch
 ```
 
-Finally, open `file:///path/to/ng-boilerplate/build/index.html` in your browser.
+Finally, open `file:///path/to/biddy/build/index.html` in your browser.
 
 Happy hacking!
 
@@ -19,4 +19,4 @@ Happy hacking!
 biddy
 =======
 
-Bids App Demo
+Bids App Demo written in AngularJS
