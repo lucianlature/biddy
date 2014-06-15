@@ -66,34 +66,22 @@ angular
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope, $interval ) {
+.controller( 'HomeCtrl', function HomeController( $scope, $http, $interval ) {
+
+  var expires = [
+    new Date(+new Date() + 1728e5).getTime(),
+    new Date(+new Date() + 864e5).getTime()
+  ];
 
   $scope.format = 'M/d/yy h:mm:ss a';
 
-  $scope.tiles = [{
-    id: 'b1',
-    title: 'Bid #1',
-    expires: new Date(+new Date() + 1728e5).getTime(),
-    isVisible: true,
-    image: 'assets/images/bid1.jpg'
-  }, {
-    id: 'b2',
-    title: 'Bid #2',
-    expires: new Date(+new Date() + 864e5).getTime(),
-    isVisible: true,
-    image: 'assets/images/bid2.jpg'
-  }, {
-    id: 'b3',
-    title: 'Bid #3',
-    expires: new Date(+new Date() + 1728e5).getTime(),
-    isVisible: true,
-    image: 'assets/images/bid3.jpg'
-  }];
-  /*
-  $sc = items.map(function(item){
-          item.timer = Math.floor((item.expires - time)/1000);
-        });
-  */
+  $http.get('assets/data/bids.json').success(function (data) {
+    data.forEach(function (bid) {
+      bid.expires = expires[Math.random() > 0.5 ? 0 : 1];
+    });
+    $scope.tiles = data;
+  });
+
 });
 
 function pretty_time_string ( num ) {
