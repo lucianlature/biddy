@@ -14,9 +14,7 @@
                 <span class="timer" bid-time-left="tile.timer"></span>
               </p>
               <div class="panel-footer">
-                <!---<button type="button" class="btn btn-lg btn-info bid-btn" data-click="bid(tile)" data-toggle="popover" title="first tooltip">Bid now!</button>-->
-                <button type="button" class="btn btn-default coco" data-container="body" data-toggle="tooltip" data-placement="right" data-content="<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>" data-original-title="" title="">Bid!</button>
-                <!--<a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>-->
+                <button popover="{{dynamicPopover}}" popover-title="{{dynamicPopoverTitle}}" class="btn btn-default">Dynamic Popover</button>
               </div>
             </div>
           <div>

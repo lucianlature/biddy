@@ -16,7 +16,7 @@ angular
 
 .module( 'ngBoilerplate.home', [
   'ui.router',
-  'plusOne'
+  'ui.bootstrap'
 ])
 
 // Register the 'bidTimeLeft' directive factory method.
@@ -72,6 +72,9 @@ angular
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
   ];
+
+  $scope.dynamicPopover = "<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>";
+  $scope.dynamicPopoverTitle = 'Please enter your bid';
 
   $scope.format = 'M/d/yy h:mm:ss a';
 
