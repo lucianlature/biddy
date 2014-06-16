@@ -45,6 +45,34 @@ angular
   };
 })
 
+/*
+.directive('dynamicTooltip', function ($compile) {
+  return {
+    restrict: 'A',
+    scope: {
+      tooltipElement: '=',
+      dynamicTooltip: '@'
+    },
+    link: function(scope, element, attrs) {
+      var template = '<a href="#" tooltip-placement="top" tooltip="' + scope.dynamicTooltip + '">{{tooltipElement}}</a>';
+      scope.$watch('tooltipElement', function (value) {
+        var previousTooltip = element.find('a');
+        angular.forEach(previousTooltip, function (item, i) {
+          var el = angular.element(item);
+          el.replaceWith(el.text());
+        });
+        var searchText = scope.tooltipElement;
+        if (searchText) {
+          replaced = element.html().replace(new RegExp(searchText, "g"), template);
+          element.html(replaced);
+        }
+        $compile(element.contents())(scope);
+      });
+    }
+  }
+})
+*/
+
 /**
  * Each section or module of the site can also have its own routes. AngularJS
  * will handle ensuring they are all available at run-time, but splitting it
@@ -71,9 +99,10 @@ angular
   var expires = [
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
-  ];
-
-  $scope.dynamicPopover = "<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>";
+  ],
+  item = "<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>";
+  // $scope.dynamicPopover = angular.element(item);
+  $scope.dynamicPopover = item;
   $scope.dynamicPopoverTitle = 'Please enter your bid';
 
   $scope.format = 'M/d/yy h:mm:ss a';
