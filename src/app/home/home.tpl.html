@@ -10,11 +10,11 @@
             <div class="panel panel-primary view" ng-show="{{tile.isVisible}}">
               <div class="panel-heading">{{tile.title}}</div>
               <p class="panel-body">
-                <img src={{tile.image}} /><br />
+                <img src={{tile.image}} ng-cloak /><br />
                 <span class="timer" bid-time-left="tile.timer"></span>
               </p>
               <div class="panel-footer">
-                <button tooltip-html-unsafe="{{dynamicPopover}}" popover-title="{{dynamicPopoverTitle}}" class="btn btn-default">Dynamic Popover</button>
+                <button popover-placement="right" data-animation="am-flip-x" popover-template="{{ bidTemplate }}" class="btn btn-default">Bid!</button>
               </div>
             </div>
           <div>

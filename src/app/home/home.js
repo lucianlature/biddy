@@ -16,7 +16,8 @@ angular
 
 .module( 'ngBoilerplate.home', [
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.bootstrap.tpls'
 ])
 
 // Register the 'bidTimeLeft' directive factory method.
@@ -95,14 +96,14 @@ angular
  * And of course we define a controller for our route.
  */
 .controller( 'HomeCtrl', function HomeController( $scope, $http, $interval ) {
-
   var expires = [
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
   ],
   item = "<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>";
   // $scope.dynamicPopover = angular.element(item);
-  $scope.dynamicPopover = item;
+  $scope.bidTemplate = 'assets/template/bidForm.html';
+  $scope.dynamicPopover = 'Bai, ejti nebun?';
   $scope.dynamicPopoverTitle = 'Please enter your bid';
 
   $scope.format = 'M/d/yy h:mm:ss a';
