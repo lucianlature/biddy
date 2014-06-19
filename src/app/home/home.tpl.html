@@ -14,7 +14,8 @@
                 <span class="timer" bid-time-left="tile.timer"></span>
               </p>
               <div class="panel-footer">
-                <button popover-placement="right" data-animation="am-flip-x" popover-template="{{ bidTemplate }}" class="btn btn-default">Bid!</button>
+                <!--<button popover-placement="right" data-animation="am-flip-x" popover-template="{{ bidTemplate }}" class="btn btn-default" bs-popover>Bid!</button>-->
+                <button type="button" class="btn btn-primary" title="{{popover.title}}" data-content="{{popover.content}}" popover-placement="right" popover-template="{{ popover.template }}" data-animation="am-flip-x" bs-popover>Custom Popover</button>
               </div>
             </div>
           <div>

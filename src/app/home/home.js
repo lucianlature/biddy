@@ -103,8 +103,11 @@ angular
 
   // $scope.dynamicPopover = angular.element(item);
   $scope.bidTemplate = 'assets/template/bidForm.html';
-  $scope.dynamicPopover = 'Bai, ejti nebun?';
-  $scope.dynamicPopoverTitle = 'Please enter your bid';
+  $scope.popover = {
+    "title": "Title",
+    "template": "assets/template/bidForm.html",
+    "content": "Hello Popover<br />This is a multiline message!"
+  };
 
   $scope.format = 'M/d/yy h:mm:ss a';
 
