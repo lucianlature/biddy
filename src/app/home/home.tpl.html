@@ -10,7 +10,7 @@
             <div class="panel panel-primary view" ng-show="{{tile.isVisible}}">
               <div class="panel-heading">{{tile.title}}</div>
               <p class="panel-body">
-                <img src={{tile.image}} ng-cloak /><br />
+                <img ng-src={{tile.image}} ng-cloak /><br />
                 <span class="timer" bid-time-left="tile.timer"></span>
               </p>
               <div class="panel-footer">

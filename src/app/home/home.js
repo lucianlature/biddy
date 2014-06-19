@@ -99,8 +99,8 @@ angular
   var expires = [
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
-  ],
-  item = "<input data-bid-id='{{tile.id}}' class='bidVal' type='text' value='0.00'>";
+  ];
+
   // $scope.dynamicPopover = angular.element(item);
   $scope.bidTemplate = 'assets/template/bidForm.html';
   $scope.dynamicPopover = 'Bai, ejti nebun?';
