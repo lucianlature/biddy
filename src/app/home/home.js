@@ -102,7 +102,7 @@ angular
   ];
 
   // $scope.dynamicPopover = angular.element(item);
-  $scope.bidTemplate = 'assets/template/bidForm.html';
+  // $scope.bidTemplate = 'assets/template/bidForm.html';
   $scope.popover = {
     "title": "Title",
     "template": "assets/template/bidForm.html",
@@ -110,6 +110,10 @@ angular
   };
 
   $scope.format = 'M/d/yy h:mm:ss a';
+
+  //$scope.$hide = function () {
+  //  alert('hide');
+  //};
 
   $http.get('assets/data/bids.json').success(function (data) {
     data.forEach(function (bid) {
