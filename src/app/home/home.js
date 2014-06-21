@@ -111,9 +111,20 @@ angular
 
   $scope.format = 'M/d/yy h:mm:ss a';
 
+  // bid initial value
+  $scope.bid = 10;
+
   //$scope.$hide = function () {
   //  alert('hide');
   //};
+  //
+  $scope.submit = function() {
+    console.info('submit!');
+    if ($scope.text) {
+      $scope.list.push(this.text);
+      $scope.text = '';
+    }
+  };
 
   $http.get('assets/data/bids.json').success(function (data) {
     data.forEach(function (bid) {
