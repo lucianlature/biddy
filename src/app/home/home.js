@@ -119,10 +119,9 @@ angular
   //};
   //
   $scope.submit = function() {
-    console.info('submit!');
-    if ($scope.text) {
-      $scope.list.push(this.text);
-      $scope.text = '';
+    if ($scope.bid) {
+      // the bid is stored in this.bid
+      $scope.bid = 10;
     }
   };
 
