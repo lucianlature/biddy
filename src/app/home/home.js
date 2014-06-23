@@ -16,8 +16,10 @@ angular
 
 .module( 'ngBoilerplate.home', [
   'ui.router',
-  'ui.bootstrap',
-  'ui.bootstrap.tpls'
+  'mgcrea.ngStrap.helpers.dimensions',
+  'mgcrea.ngStrap.tooltip',
+  'mgcrea.ngStrap.popover',
+  'ngAnimate'
 ])
 
 // Register the 'bidTimeLeft' directive factory method.
