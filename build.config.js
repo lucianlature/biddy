@@ -63,9 +63,9 @@ module.exports = {
   vendor_files: {
     js: [
       'vendor/angular/angular.js',
-      'vendor/angular-strap/dist/angular-strap.min.js',
-      'vendor/angular-strap/dist/angular-strap.tpl.min.js',
-      // 'vendor/angular-animate/angular-animate.min.js',
+      'vendor/angular-bootstrap-jbruni/ui-bootstrap-tpls.min.js',
+      'vendor/angular-bootstrap-jbruni/ui-bootstrap.min.js',
+      'vendor/angular-animate/angular-animate.min.js',
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js'
