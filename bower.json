@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "angular-strap": "~2.0.3",
-    "angular-motion": "~0.3.2"
+    "angular-motion": "~0.3.2",
+    "socket.io-client": "~1.0.6"
   }
 }

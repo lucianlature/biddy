@@ -17,7 +17,8 @@ angular
 .module( 'ngBoilerplate.home', [
   'ui.router',
   'ui.bootstrap',
-  'ui.bootstrap.tpls'
+  'ui.bootstrap.tpls',
+  'socket'
 ])
 
 // Register the 'bidTimeLeft' directive factory method.
@@ -95,7 +96,8 @@ angular
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope, $http, $interval ) {
+.controller( 'HomeCtrl', function HomeController( $scope, $http, $interval, socket ) {
+
   var expires = [
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
@@ -121,7 +123,7 @@ angular
   $scope.submit = function() {
     if ($scope.bid) {
       // the bid is stored in this.bid
-      $scope.bid = 10;
+      console.info(this.bid);
     }
   };
 

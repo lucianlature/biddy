@@ -68,7 +68,8 @@ module.exports = {
       'vendor/angular-animate/angular-animate.min.js',
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
-      'vendor/angular-ui-utils/modules/route/route.js'
+      'vendor/angular-ui-utils/modules/route/route.js',
+      'vendor/socket.io-client/socket.io.js'
     ],
     css: [
       'vendor/angular-motion/dist/angular-motion.min.css'
