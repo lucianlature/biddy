@@ -1,16 +1,16 @@
 {
-  "author": "Josh David Miller",
-  "name": "ngbp",
-  "version": "0.3.2",
-  "homepage": "https://github.com/ngbp/ngbp",
+  "author": "Lucian Lature",
+  "name": "biddy",
+  "version": "0.1.0",
+  "homepage": "https://github.com/lucianlature/biddy",
   "licenses": {
     "type": "MIT",
-    "url": "https://raw.github.com/ngbp/ngbp/master/LICENSE"
+    "url": "https://raw.github.com/lucianlature/biddy/master/LICENSE"
   },
-  "bugs": "https://github.com/ngbp/ngbp/issues",
+  "bugs": "https://github.com/lucianlature/biddy/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ngbp/ngbp.git"
+    "url": "git@github.com:lucianlature/biddy.git"
   },
   "dependencies": {},
   "devDependencies": {
