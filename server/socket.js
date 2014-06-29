@@ -1,63 +1,49 @@
-// Keep track of which names are used so that there are no duplicates
-var userNames = (function () {
-  var names = {};
-
-  var claim = function (name) {
-    if (!name || names[name]) {
-      return false;
-    } else {
-      names[name] = true;
-      return true;
+var _ = require('lodash'),
+    randomFromArray = function (ar) {
+      return ar[_.random(ar.length-1)];
     }
-  };
 
-  // find the lowest unused "guest" name and claim it
-  var getGuestName = function () {
-    var name,
-      nextUserId = 1;
+// Keep track of which bids are emulated so that there are no duplicates
+var bids = (function () {
 
-    do {
-      name = 'Guest ' + nextUserId;
-      nextUserId += 1;
-    } while (!claim(name));
-
-    return name;
-  };
+  var bidValues = _.range(10, 20, .1),
+      bidProducts = _.range(1, 10);
 
   // serialize claimed names as an array
-  var get = function () {
-    var res = [];
-    for (user in names) {
-      res.push(user);
-    }
-
-    return res;
-  };
-
-  var free = function (name) {
-    if (names[name]) {
-      delete names[name];
-    }
+  var getRandom = function () {
+    return {
+      bid: Number(randomFromArray(bidValues).toFixed(2)),
+      productId: randomFromArray(bidProducts)
+    };
   };
 
   return {
-    claim: claim,
-    free: free,
-    get: get,
-    getGuestName: getGuestName
+    getRandom: getRandom
   };
 }());
 
 // export function for listening to the socket
 module.exports = function (socket) {
-  var name = userNames.getGuestName();
 
+  var fakeBid = bids.getRandom();
   // send the new user their name and a list of users
   socket.emit('init', {
-    name: name,
-    users: userNames.get()
+    bid: fakeBid
   });
 
+  setInterval( function () {
+    var fakeBid = bids.getRandom();
+    console.info(fakeBid);
+    socket.emit('fakebid:product', fakeBid);
+  }, 1000);
+
+  socket.on('bid:product', function (data) {
+    // do something with the data
+    console.log('Bid => ');
+    console.info(data);
+  });
+
+  /*
   // notify other clients that a new user has joined
   socket.broadcast.emit('user:join', {
     name: name
@@ -97,4 +83,5 @@ module.exports = function (socket) {
     });
     userNames.free(name);
   });
+  */
 };

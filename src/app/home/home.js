@@ -98,6 +98,15 @@ angular
  */
 .controller( 'HomeCtrl', function HomeController( $scope, $http, $interval, socket ) {
 
+  socket.on('init', function (data) {
+    console.info(data);
+  });
+
+  socket.on('fakebid:product', function (data) {
+    console.log('fake bid:');
+    console.info(data);
+  });
+
   var expires = [
     new Date(+new Date() + 1728e5).getTime(),
     new Date(+new Date() + 864e5).getTime()
