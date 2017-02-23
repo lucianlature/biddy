@@ -1,5 +1,7 @@
 ## Quick Start
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lucianlature/biddy.svg)](https://greenkeeper.io/)
+
 Install Node.js and then:
 
 ```sh
